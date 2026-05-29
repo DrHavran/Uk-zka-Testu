@@ -25,7 +25,7 @@ public class Controller {
 
         // Pokud je zadaný kontinent, vyfiltruj ještě continent (continent je optional)
         if(continent != null){
-            result = countries.stream()
+            result = result.stream()
                     .filter(country -> country.getContinent().equalsIgnoreCase(continent))
                     .collect(Collectors.toCollection(ArrayList::new));
         }
